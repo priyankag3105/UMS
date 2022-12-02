@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<script>
+    class Library
+    {
+        acc_num; title; author; fine;
+        input()
+        {
+            this.acc_num=parseInt(prompt("Enter Account Number"))
+            this.title=prompt("Enter Title")
+            this.author=prompt("Enter author")
+        }
+        compute()
+        {
+            let late=prompt("Enter no of days of late")
+            this.fine=late*2
+        }
+        display()
+        {
+            document.write("Accession Number::"+this.acc_num+ '<br>', "Title::"+this.title+ '<br>', "Author::"+this.author+ '<br>', "Fine::"+this.fine);
+        }
+    }
+    let lib=new Library()
+    lib.input()
+    lib.compute()
+    lib.display()
+</script>

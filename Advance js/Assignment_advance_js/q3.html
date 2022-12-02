@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<script>
+   
+
+
+    class Student
+{
+    name; age; m1; m2; m3; max; avg;
+
+    Input()
+    {
+        this.name=prompt("Enter your name")
+        this.age=parseInt(prompt("Enter your age"))
+        this.m1=parseInt(prompt("Enter M1"))
+        this.m2=parseInt(prompt("Enter M2"))
+        this.m3=parseInt(prompt("Enter M3"))
+    }
+    result()
+    {
+        document.write("Name:-"+this.name+'<br>')
+        document.write("Marks:"+this.m1+','+this.m2+"and"+this.m3+"<br>")
+        document.write("Maximum Marks:-"+this.max+"<br>")
+        document.write("Average:-"+this.avg+"<br>")
+    }
+    calc()
+    {
+        this.max=Math.max(Math.max(this.m1,this.m2),this.m3)
+        this.avg=(this.m1+this.m2+this.m3)/3
+    }
+}
+let ob=new Student();
+ob.Input();
+ob.calc();
+ob.result();
+</script>

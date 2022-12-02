@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<script>
+    class Bill
+{
+    name; consumerno; unitconsume; billAmount;
+
+dataInput()
+{
+    this.name=prompt("Enter Your Name")
+    this.consumerno=prompt("Enter the consumer number")
+    this.unitconsume=prompt("Enter the total units Consumed")
+}
+compute()
+{
+    if(this.unitconsume<=100)
+    {
+        this.billAmount=this.unitconsume*1.20
+    }
+    else if(this.unitconsume>100 && this.unitconsume<=200)
+    {
+        this.billAmount=this.unitconsume*2.20
+    }
+    else if(this.unitconsume>200 && this.unitconsume<=300)
+    {
+        this.billAmount=this.unitconsume*3.20
+    }
+    else if(this.unitconsume>300)
+    {
+        this.billAmount=this.unitconsume*4
+    }
+}
+display()
+{
+    document.write("Consumer Name",'Consumer number',"Unit Consumed","Bill Amount","<br>")
+    document.write(this.name+""+this.consumerno+""+this.unitconsume+""+this.billAmount)
+}
+}
+let bill1=new Bill();
+bill1.dataInput();
+bill1.compute();
+bill1.display();
+</script>

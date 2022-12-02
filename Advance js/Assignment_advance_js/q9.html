@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<script>
+    class Empl{
+    Emp_No; name; Basic; DA; HRA; TA; PF; Gross;
+    get()
+    {
+        this.Emp_No=prompt("Enter employee number")
+        this.name=prompt("Enter your full name")
+        this.Basic=parseInt(prompt("Enter your basic salary"))
+    }
+    calcu()
+    {
+        if(this.Basic>=20000)
+        {
+            this.DA=this.Basic*53/100
+            this.TA=this.Basic*12/100
+            this.HRA=this.Basic*10/100
+            this.PF=this.Basic*8/100
+            this.Gross=(this.Basic+this.DA+this.TA+this.HRA)-this.PF
+        }
+        else if(this.Basic>=10000 && this.Basic<20000)
+        {
+            this.DA=this.Basic*45/100
+            this.TA=this.Basic*10/100
+            this.HRA=this.Basic*12/100
+            this.PF=this.Basic*7.5/100
+            this.Gross=(this.Basic+this.DA+this.TA+this.HRA)-this.PF
+        }
+        else if(this.Basic<10000)
+        {
+            this.DA=this.Basic*40/100
+            this.TA=this.Basic*8/100
+            this.HRA=this.Basic*14/100
+            this.PF=this.Basic*7/100
+            this.Gross(this.Basic+this.DA+this.TA+this.HRA)-this.PF
+        }
+    }
+    display()
+    {
+        document.write("EMPLOYEE NO.::"+this.Emp_No+ '<br>',"NAME::"+this.name+ '<br>',"GROSS SALARY::"+this.Gross+ '<br>',"PF::"+this.PF);
+        
+    }
+}
+let emp=new Empl();
+emp.get();
+emp.calcu();
+emp.display();
+</script>

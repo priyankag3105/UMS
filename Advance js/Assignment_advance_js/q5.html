@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<script>
+    class Mobike
+    {
+      bno; phno; name; days; charge;
+      input()
+      {
+        this.bno=prompt("Enter bike no")
+        this.phno=prompt("ENter phone no")
+        this.name=prompt("Enter name")
+        this.days=prompt("Enter number of days the bike is taken on rent")
+      }
+      display()
+      {
+        document.write("Bike No:"+this.bno+ '<br>',"Phone No:"+this.phno+ '<br>', "Name:"+this.name+ '<br>', "No of days:"+this.days+ '<br>', "charge:"+this.charge);
+      }
+      compute()
+      {
+        if(this.days<=5)
+        {
+            this.charge=500*this.days
+        }
+        else if(this.days>=6 && this.days<=10)
+        {
+            this.charge=400*this.days
+        }
+        else if(this.days>=10)
+        {
+           this.charge=200*this.days
+        }
+      }
+    }
+    let mb=new Mobike()
+    mb.input()
+    mb.compute()
+    mb.display()
+</script>

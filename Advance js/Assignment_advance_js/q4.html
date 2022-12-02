@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<script>
+    class Employee
+    {
+        name; pan; tax_income; tax;
+        input()
+        {
+            this.name=prompt("Enter name")
+            this.pan=prompt("Enter pan no")
+            this.tax_income=parseInt(prompt("Enter Tax Income"))  
+        }
+        display()
+        {
+            document.write('name:'+this.name+ '<br>','pan:'+this.pan+ '<br>', 'Tax Income:' +this.tax_income+ '<br>' ,'Tax:'+this.tax); 
+       }
+        calc()
+        {
+            if(this.tax_income<=100000)
+    {
+        this.tax=0
+    }
+    else if(this.tax_income>=100001 && this.tax_income<=150000)
+    {
+        this.tax=10/100*(this.tax_income-100000)
+    }
+    else if(this.tax_income>=150001 && this.tax_income<250000)
+    {
+        this.tax=5000+20/100*(this.tax_income-150000)
+    }
+    else if(this.tax_income>250000)
+    {
+        this.tax=25000+30/100*(this.tax_income-250000)
+    }
+        }
+    }
+
+    let emp=new Employee();
+    emp.input();
+    emp.calc();
+    emp.display();
+</script>

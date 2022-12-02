@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<script>
+    class ElectricBill
+{
+    n; units; bill;
+
+    accept()
+    {
+        this.n=prompt("Enter the name of customer");
+        this.units=parseInt(prompt("Enter the total units consumed"));
+    }
+    calculate()
+    {
+        if(this.units<=100)
+        {
+            this.bill=this.units*2
+        }
+        else if(this.units>100 && this.units<=300)
+        {
+            this.bill=this.units*3
+        }
+        else
+        {
+            this.bill=(this.units*5)+2.5/100
+        }
+    }
+    print()
+    {
+        document.write("Name of the customer:-",this.n,"<br>");
+        document.write("Number of units consumed:-",this.units,"<br>");
+        document.write("Bill Amount:-",this.bill)
+    }
+}
+let Bill=new ElectricBill();
+Bill.accept();
+Bill.calculate();
+Bill.print();
+</script>

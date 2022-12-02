@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<script>
+    class BookFair
+    {
+        Bname; price;
+        input()
+        {
+            this.Bname=prompt("Enter Book Name")
+            this.price=parseInt(prompt("Enter Book price"))
+        }
+        calculate()
+        {
+            if(this.price<=1000)
+            {
+                this.price=this.price-(2/100*this.price)
+            }
+            else if(this.price>1000 && this.price<=3000)
+            {
+                this.price=this.price-(10/100*this.price)
+            }
+            else
+            {
+                this.price=this.price-(15/100*this.price)
+            }
+        }
+        display()
+        {
+            document.write("Book Name::"+this.Bname+'<br>',"Price after discount::"+this.price);
+        }
+
+    }
+    let book=new BookFair()
+    book.input()
+    book.calculate()
+    book.display()
+</script>

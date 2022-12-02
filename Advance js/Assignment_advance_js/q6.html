@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<script>
+   class student
+{
+    name; hindi; english; maths; computer; average; grade
+
+    accept()
+    {
+        this.name=prompt("Enter your full name")
+        this.hindi=parseInt(prompt("Enter the marks obtained in hindi"))
+        this.english=parseInt(prompt("Enter the marks obtained in english"))
+        this.maths=parseInt(prompt("Enter the marks obtained in maths"))
+        this.computer=parseInt(prompt("Enter the marks obtained in computer"))
+    }
+   calcavg()
+   {
+    this.average=(this.hindi+this.english+this.maths+this.computer)/4
+    if(this.average>=90)
+    {
+        document.write("Pass With Grade:-A++")
+    }
+    else if(this.average>=75 && this.average<=89)
+    {
+        document.write("Pass With Grade:-A")
+    }
+    else
+    {
+        document.write("Pass With Grade:-B")
+    }
+   }
+}
+let ans=new student();
+ans.accept()
+ans.calcavg()
+</script>

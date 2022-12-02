@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<script>
+    class RailwtTicket
+{
+    name; coach; mobno; amt; totalAmt;
+
+    accept()
+    {
+        this.name=prompt("Enter your name");
+        this.coach=prompt("Enter the coach you want to book");
+        this.mobno=prompt("Enter your mobile number");
+        this.amt=parseInt(prompt("Enter the basic amount"));
+    }
+    update()
+    {
+        if(this.coach==="First AC")
+        {
+            this.totalAmt=this.amt+700
+        }
+        else if(this.coach==="Second AC")
+        {
+            this.totalAmt=this.amt+500
+        }
+        else if(this.coach==="Third AC")
+        {
+            this.totalAmt=this.amt+250
+        }
+        else if(this.coach==="Sleeper")
+        {
+            this.totalAmt=this.amt
+        }
+    }
+    display()
+    {
+        document.write("Name:-",this.name,"<br>")
+        document.write("Coach:-",this.coach,"<br>")
+        document.write("Mobile Number:-",this.mobno,"<br>")
+        document.write("Total Amount:-",this.totalAmt)
+    }
+}
+let rail=new RailwtTicket();
+rail.accept();
+rail.update();
+rail.display();
+</script>

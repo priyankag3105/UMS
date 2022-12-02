@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<script>
+
+class Salary
+{
+    name; adress; subspe; mSal; IT; phone;
+    input()
+    {
+        this.name=prompt('Enter your name')
+        this.adress=prompt('Enter your adress')
+        this.subspe=prompt('Enter your subject specialisation')
+        this.mSal=prompt('Enter your monthly salary')
+        this.phone=prompt('Enter your phone number')
+    }
+    result()
+    {
+        document.write("Name:-"+this.name+"<br>")
+        document.write("Adress:-"+this.adress+"<br>")
+        document.write("Subject Specialisation:-"+this.subspe+"<br>")
+        document.write("Monthly salary:-"+this.mSal+"<br>")
+        document.write("Phone number:-"+this.phone+'<br>')
+    }
+    calc()
+    {
+        let aSal;
+        aSal=12*this.mSal;
+        if(aSal>175000)
+        {
+            this.IT=5/100*(aSal-175000)
+        }
+        else
+        {
+            this.IT=0
+        }
+        document.write("IT:-"+this.IT+"<br>")
+    }
+}
+
+let teacher=new Salary();
+teacher.input();
+teacher.calc();
+teacher.result();
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<script>
+    class ParkingLot
+    {
+        vno; hours; bill;
+        input()
+        {
+            this.vno=parseInt(prompt("Enter vehicle No"))
+            this.hours=parseInt(prompt("Enter the no of hours vehicle is parked in parking lot"))
+        }
+        calculate()
+        {
+            if(this.hours==1)
+            {
+                this.bill=this.hours*3
+            }
+            else{
+                this.bill=this.hours*1.50+1.5
+            }
+        }
+        display()
+        {
+            document.write("Vehicle no::"+this.vno+ '<br>', "Parking Hours::"+this.hours+ '<br>', "Bill::"+this.bill);
+        }
+    }
+    let park=new ParkingLot()
+    park.input()
+    park.calculate()
+    park.display()
+</script>
