@@ -1,0 +1,30 @@
+.card{
+    padding: 30px;
+   
+    box-shadow: 0 0 3px #18aeda;
+}
+img{
+    width:100%;
+    margin-top: 20px;
+}
+
+.siginbtn:hover{
+    border-radius: 30px;
+   
+}
+img.vert-move {
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+img.vert-move {
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}

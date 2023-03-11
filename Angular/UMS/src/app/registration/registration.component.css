@@ -1,0 +1,25 @@
+
+.card{
+    padding: 30px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+    box-shadow: 0 0 3px #18aeda;
+}
+img{
+    width:100%;
+    
+}
+a{
+    text-decoration:none;
+}
+.signin{
+    box-shadow: 0 0 3px #007bff;
+}
+input.ng-invalid.ng-touched {
+    border:1px solid red;
+    /* box-shadow: 0 0 13px inset red; */
+}
+span{
+    color:red;
+}
+

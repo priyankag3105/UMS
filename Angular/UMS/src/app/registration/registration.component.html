@@ -1,0 +1,112 @@
+
+
+<div class="container">
+    <div class="row justify-content-center ">
+        <div class="col-md-5 ">
+            <div class="card ">
+              <div class="text-center mb-2">
+        <h3>Registration</h3>
+              </div>
+            <form [formGroup]="register" >
+                <div class="form-group row mb-3">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label">First Name</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" name="fname" placeholder="" formControlName="fname">
+                    </div>
+                  </div>
+                  <div class="form-group row mb-3">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label">Last Name</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" name="lname" placeholder="" formControlName="lname">
+                    </div>
+                  </div>
+                <div class="form-group row mb-3">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label">Email</label>
+                    <div class="col-sm-9">
+                      <input type="email" class="form-control" (blur)="emailcheck($event.target.value)"  name="email" placeholder="" formControlName="email">
+                      <div *ngIf="register.controls['email'].invalid && register.controls['email'].touched">
+                        <div *ngIf="register.controls['email']">
+                        <span> enter valid email</span>
+                      </div>
+                    </div>
+                  
+                    </div>
+                  </div>
+                  <div class="form-group row mb-3">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label">Phone No.</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" name="phno" placeholder="" formControlName="phno" >
+                      <div *ngIf="register.controls['phno'].invalid && register.controls['phno'].touched">
+                        <div *ngIf="register.controls['phno']">
+                        <span> enter valid phone no</span>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="form-group row mb-3">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label">Dob</label>
+                    <div class="col-sm-9">
+                      <input type="date" class="form-control" name="dob" placeholder="" formControlName="dob">
+                    </div>
+                  </div>
+                  <div class="form-group row mb-3">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label">Gender</label>
+                    <div class="col-sm-9">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="male" formControlName="gender">
+                            <label class="form-check-label" for="inlineRadio1">male</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="female" formControlName="gender">
+                            <label class="form-check-label" for="inlineRadio1">Female</label>
+                          </div>
+                    </div>
+                  </div>
+             
+                  <div class="form-group row mb-3">
+                    <label for="exampleFormControlSelect1" class="col-sm-3 col-form-label">Country</label>
+                    <div class="col-sm-9">
+                        <select (change)="getstatesbycountryid($event.target.value)" class="form-control" id="exampleFormControlSelect1" name="countryId" formControlName="countryId">
+                          
+                          <option *ngFor="let country of countries|keyvalue" [value]="country.key">{{country.value}}</option>
+                            
+                            
+                          </select>
+                    </div>
+                  </div>  
+                  <div class="form-group row mb-3">
+                    <label for="exampleFormControlSelect1" class="col-sm-3 col-form-label">State</label>
+                    <div class="col-sm-9">
+                        <select (change)="getcitiesbystateid($event.target.value)" class="form-control" id="exampleFormControlSelect1" name="stateId" formControlName="stateId">
+                            <option *ngFor="let state of states|keyvalue" [value]="state.key">{{state.value}}</option>
+                           
+                          </select>
+                    </div>
+                  </div> 
+                  <div class="form-group row mb-3">
+                    <label for="exampleFormControlSelect1" class="col-sm-3 col-form-label">City</label>
+                    <div class="col-sm-9">
+                        <select class="form-control" id="exampleFormControlSelect1" name="cityId" formControlName="cityId">
+                            <option *ngFor="let city of cities|keyvalue" [value]="city.key">{{city.value}}</option>
+                            
+                          </select>
+                    </div>
+                  </div>      
+                            
+                   <div class="text-center mt-4"> 
+                    <button type="reset" class="btn btn-secondary ">Reset</button>
+                    <button  type="submit" class="btn btn-primary mx-4" [disabled]="!register.valid" (click)="emailcheck(register)">Register</button>
+                   </div>
+                   
+            </form>
+         
+          </div>
+         
+            </div>
+      <div class="col-md-7 mt-5">
+       <img src="../../assets/pic-1.png" class="vert-move">
+      </div>
+      
+     
+    </div>
+    </div>
