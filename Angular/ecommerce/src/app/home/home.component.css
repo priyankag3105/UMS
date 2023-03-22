@@ -1,0 +1,15 @@
+.carousel-control-prev-icon{
+    background-color: #000;
+    border-radius: 5px;
+}
+.carousel-control-next-icon{
+    background-color: #000;
+    border-radius: 5px; 
+}
+.carousel-caption {
+    background-color: #0000007d;
+    border-radius: 10px;
+}
+.images{
+    border-radius: 7px;
+}
